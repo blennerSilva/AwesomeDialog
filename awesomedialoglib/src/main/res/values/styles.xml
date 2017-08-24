@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="RoundedDialog">
+        <item name="android:background">@drawable/dialog_btn_rounded</item>
+        <item name="android:textColor">#ffffff</item>
+        <item name="android:paddingLeft">10dp</item>
+        <item name="android:paddingRight">10dp</item>
+    </style>
+
+    <style name="AlertDialog.AppCompat.CircleBackground">
+        <item name="android:background">@drawable/dialog_circle</item>
+    </style>
+</resources>

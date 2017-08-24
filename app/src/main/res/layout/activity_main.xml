@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.awesomedialog.blennersilva.awesomedialog.MainActivity">
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="#bf1313"
+        android:text="Error Dialog"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginTop="50dp"
+        android:textColor="#fff"
+        android:id="@+id/btnError"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="#0861ce"
+        android:text="Info Dialog"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginTop="10dp"
+        android:textColor="#fff"
+        android:layout_below="@id/btnError"
+        android:id="@+id/btnInfo"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="#08ce57"
+        android:text="Progress Dialog"
+        android:layout_marginTop="14dp"
+        android:textColor="#fff"
+        android:id="@+id/btnProgress"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_below="@+id/btnInfo"
+        android:layout_alignParentEnd="true" />
+
+</RelativeLayout>

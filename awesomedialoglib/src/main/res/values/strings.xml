@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Awesome Dialog Library</string>
+    <string name="dialog_ok_button">Ok</string>
+</resources>
