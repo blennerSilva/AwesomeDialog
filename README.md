@@ -180,18 +180,19 @@ new AwesomeSuccessDialog(this)
 # Screenshots
 
 ## Info
-<img src="https://github.com/blennerSilva/AwesomeDialog/blob/master/awesomedialoglib/extras/screenshots/info.png" width="100" >
+<img src="https://github.com/blennerSilva/AwesomeDialog/blob/master/awesomedialoglib/extras/screenshots/info.png" width="300" >
 
 ## Error
-<img src="https://github.com/blennerSilva/AwesomeDialog/blob/master/awesomedialoglib/extras/screenshots/error.png" width="100" >
+<img src="https://github.com/blennerSilva/AwesomeDialog/blob/master/awesomedialoglib/extras/screenshots/error.png" width="300" >
 
 ## Progress
-<img src="https://github.com/blennerSilva/AwesomeDialog/blob/master/awesomedialoglib/extras/screenshots/progress.png" width="100" >
+<img src="https://github.com/blennerSilva/AwesomeDialog/blob/master/awesomedialoglib/extras/screenshots/progress.png" width="300" >
 
 ## Warning
-<img src="https://github.com/blennerSilva/AwesomeDialog/blob/master/awesomedialoglib/extras/screenshots/warning.png" width="100" >
+<img src="https://github.com/blennerSilva/AwesomeDialog/blob/master/awesomedialoglib/extras/screenshots/warning.png" width="300" >
 
 ## Notice
-<img src="https://github.com/blennerSilva/AwesomeDialog/blob/master/awesomedialoglib/extras/screenshots/notice.png" width="100" >
+<img src="https://github.com/blennerSilva/AwesomeDialog/blob/master/awesomedialoglib/extras/screenshots/notice.png" width="300" >
+
 ## Success
-<img src="https://github.com/blennerSilva/AwesomeDialog/blob/master/awesomedialoglib/extras/screenshots/success.png" width="100" >
+<img src="https://github.com/blennerSilva/AwesomeDialog/blob/master/awesomedialoglib/extras/screenshots/success.png" width="300" >
