@@ -8,9 +8,9 @@ add jitpack to your project
 
 ```
 allprojects {
-  repositories {
+	repositories {
 		maven { url 'https://jitpack.io' }
-	}
+    }
 }
 ```  
 
@@ -21,12 +21,12 @@ dependencies {
 	compile 'com.github.blennerSilva:AwesomeDialog:2.0.0'
 }
 
-#Wiki
+# Wiki
 
-##General
+## General
 [sample module](https://github.com/blennerSilva/AwesomeDialog/tree/master/app/src/main/java/com/awesomedialog/blennersilva/awesomedialog).
 
-###Dialog Types
+### Dialog Types
 
 Each Dialog has its own top color, icon, title and message + its own featured. There are 6 types of dialogs available:
 * [AwesomeInfoDialog](#awesomeinfodialog)
