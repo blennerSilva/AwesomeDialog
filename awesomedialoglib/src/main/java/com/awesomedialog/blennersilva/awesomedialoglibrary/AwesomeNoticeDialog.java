@@ -21,10 +21,8 @@ public class AwesomeNoticeDialog extends AwesomeDialogBuilder<AwesomeNoticeDialo
         super(context);
 
         setColoredCircle(R.color.dialogNoticeBackgroundColor);
-        setDialogIconAndColor(R.drawable.ic_dialog_notice, R.color.white);
+        setDialogIconAndColor(R.drawable.ic_notice, R.color.white);
         setButtonBackgroundColor(R.color.dialogNoticeBackgroundColor);
-        setButtonText(context.getString(R.string.dialog_ok_button));
-        setButtonTextColor(R.color.white);
         setCancelable(true);
     }
 
@@ -32,7 +30,7 @@ public class AwesomeNoticeDialog extends AwesomeDialogBuilder<AwesomeNoticeDialo
         btDialogOk = findView(R.id.btDialogOk);
     }
 
-    public AwesomeNoticeDialog setErrorButton(@Nullable final Closure selecteOk) {
+    public AwesomeNoticeDialog setNoticeButtonClick(@Nullable final Closure selecteOk) {
         btDialogOk.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -49,7 +47,6 @@ public class AwesomeNoticeDialog extends AwesomeDialogBuilder<AwesomeNoticeDialo
     public AwesomeNoticeDialog setButtonBackgroundColor(int buttonBackground) {
         if (btDialogOk != null) {
             btDialogOk.getBackground().setColorFilter(ContextCompat.getColor(getContext(), buttonBackground), PorterDuff.Mode.SRC_IN);
-            btDialogOk.setVisibility(View.VISIBLE);
         }
         return this;
     }
@@ -57,7 +54,6 @@ public class AwesomeNoticeDialog extends AwesomeDialogBuilder<AwesomeNoticeDialo
     public AwesomeNoticeDialog setButtonTextColor(int textColor) {
         if (btDialogOk != null) {
             btDialogOk.setTextColor(ContextCompat.getColor(getContext(), textColor));
-            btDialogOk.setVisibility(View.VISIBLE);
         }
         return this;
     }

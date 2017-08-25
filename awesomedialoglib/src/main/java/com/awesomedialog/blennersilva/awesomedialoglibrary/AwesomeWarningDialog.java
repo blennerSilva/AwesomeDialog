@@ -21,10 +21,8 @@ public class AwesomeWarningDialog extends AwesomeDialogBuilder<AwesomeWarningDia
         super(context);
 
         setColoredCircle(R.color.dialogWarningBackgroundColor);
-        setDialogIconAndColor(R.drawable.ic_dialog_warning, R.color.white);
+        setDialogIconAndColor(R.drawable.ic_dialog_warning, R.color.black);
         setButtonBackgroundColor(R.color.dialogWarningBackgroundColor);
-        setButtonText(context.getString(R.string.dialog_ok_button));
-        setButtonTextColor(R.color.white);
         setCancelable(true);
     }
 
@@ -32,7 +30,7 @@ public class AwesomeWarningDialog extends AwesomeDialogBuilder<AwesomeWarningDia
         btDialogOk = findView(R.id.btDialogOk);
     }
 
-    public AwesomeWarningDialog setErrorButton(@Nullable final Closure selecteOk) {
+    public AwesomeWarningDialog setWarningButtonClick(@Nullable final Closure selecteOk) {
         btDialogOk.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -49,7 +47,6 @@ public class AwesomeWarningDialog extends AwesomeDialogBuilder<AwesomeWarningDia
     public AwesomeWarningDialog setButtonBackgroundColor(int buttonBackground) {
         if (btDialogOk != null) {
             btDialogOk.getBackground().setColorFilter(ContextCompat.getColor(getContext(), buttonBackground), PorterDuff.Mode.SRC_IN);
-            btDialogOk.setVisibility(View.VISIBLE);
         }
         return this;
     }
@@ -57,7 +54,6 @@ public class AwesomeWarningDialog extends AwesomeDialogBuilder<AwesomeWarningDia
     public AwesomeWarningDialog setButtonTextColor(int textColor) {
         if (btDialogOk != null) {
             btDialogOk.setTextColor(ContextCompat.getColor(getContext(), textColor));
-            btDialogOk.setVisibility(View.VISIBLE);
         }
         return this;
     }

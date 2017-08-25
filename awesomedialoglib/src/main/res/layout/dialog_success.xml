@@ -46,13 +46,14 @@
             android:layout_width="match_parent"
             android:layout_height="40dp"
             android:layout_below="@+id/dialog_message"
+            android:layout_marginBottom="10dp"
             android:layout_marginEnd="10dp"
             android:layout_marginStart="10dp"
-            android:layout_marginTop="10dp"
             android:paddingEnd="10dp"
             android:paddingLeft="10dp"
             android:paddingRight="10dp"
             android:paddingStart="10dp"
+            android:textColor="@color/white"
             android:visibility="gone" />
 
         <Button
@@ -64,11 +65,11 @@
             android:layout_marginBottom="10dp"
             android:layout_marginEnd="10dp"
             android:layout_marginStart="10dp"
-            android:layout_marginTop="10dp"
             android:paddingEnd="10dp"
             android:paddingLeft="10dp"
             android:paddingRight="10dp"
             android:paddingStart="10dp"
+            android:textColor="@color/white"
             android:visibility="gone" />
 
         <Button
@@ -84,6 +85,7 @@
             android:paddingLeft="10dp"
             android:paddingRight="10dp"
             android:paddingStart="10dp"
+            android:textColor="@color/white"
             android:visibility="gone" />
 
     </RelativeLayout>
@@ -91,10 +93,10 @@
     <RelativeLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="35dp"
-        android:background="@drawable/circle_background"
         android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true">
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="35dp"
+        android:background="@drawable/circle_background">
 
         <RelativeLayout
             android:id="@+id/colored_circle"

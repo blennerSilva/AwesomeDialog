@@ -11,6 +11,7 @@ import com.awesomedialog.blennersilva.awesomedialoglibrary.AwesomeNoticeDialog;
 import com.awesomedialog.blennersilva.awesomedialoglibrary.AwesomeProgressDialog;
 import com.awesomedialog.blennersilva.awesomedialoglibrary.AwesomeSuccessDialog;
 import com.awesomedialog.blennersilva.awesomedialoglibrary.AwesomeWarningDialog;
+import com.awesomedialog.blennersilva.awesomedialoglibrary.interfaces.Closure;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -69,67 +70,26 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void showErrorDialog() {
-        new AwesomeErrorDialog(this).show();
-        /*new AwesomeErrorDialog(this)
-                .setTitle(R.string.app_name)
-                .setMessage(R.string.app_name)
-                .setColoredCircle(R.color.dialogErrorBackgroundColor)
-                .setDialogIconAndColor(R.drawable.ic_dialog_error, R.color.white)
-                .setCancelable(true)
-                .setButtonColorTextAndTextColor(R.color.dialogErrorBackgroundColor, R.color.white, getString(R.string.dialog_ok_button))
-                .setErrorButton(new Closure() {
-                    @Override
-                    public void exec() {
-
-                    }
-                }).show();*/
+        new AwesomeErrorDialog(this).setButtonText(getString(R.string.dialog_ok_button)).show();
     }
 
     private void showInfoDialog() {
-        new AwesomeInfoDialog(this).show();
-       /* new AwesomeInfoDialog(this)
-                .setTitle(R.string.app_name)
-                .setMessage(R.string.app_name)
-                .setColoredCircle(R.color.dialogInfoBackgroundColor)
-                .setDialogIconAndColor(R.drawable.ic_dialog_info, R.color.white)
-                .setCancelable(true)
-                .setPositiveButtonColorTextAndTextColor(R.color.dialogInfoBackgroundColor, R.color.white, getString(R.string.dialog_yes_button))
-                .setNegativeButtonColorTextAndTextColor(R.color.dialogInfoBackgroundColor, R.color.white, getString(R.string.dialog_no_button))
-                .setPositiveButton(new Closure() {
-                    @Override
-                    public void exec() {
-
-                    }
-                })
-                .setNegativeButton(new Closure() {
-                    @Override
-                    public void exec() {
-
-                    }
-                })
-                .show();*/
+        new AwesomeInfoDialog(this).setPositiveButtonText(getString(R.string.dialog_ok_button)).show();
     }
 
     private void showProgressDialog() {
         new AwesomeProgressDialog(this).show();
-        /*new AwesomeProgressDialog(this)
-                .setTitle(R.string.app_name)
-                .setMessage(R.string.app_name)
-                .setColoredCircle(R.color.dialogProgressBackgroundColor)
-                .setCancelable(true)
-                .setProgressBarColor(R.color.white)
-                .show();*/
     }
 
     private void showWarningDialog() {
-        new AwesomeWarningDialog(this).show();
+        new AwesomeWarningDialog(this).setButtonText(getString(R.string.dialog_ok_button)).show();
     }
 
     private void showNoticeDialog() {
-        new AwesomeNoticeDialog(this).show();
+        new AwesomeNoticeDialog(this).setButtonText(getString(R.string.dialog_ok_button)).show();
     }
 
     private void showSuccessDialog() {
-        new AwesomeSuccessDialog(this).show();
+        new AwesomeSuccessDialog(this).setPositiveButtonText(getString(R.string.dialog_ok_button)).show();
     }
 }

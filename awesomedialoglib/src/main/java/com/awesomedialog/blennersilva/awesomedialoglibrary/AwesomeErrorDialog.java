@@ -23,8 +23,6 @@ public class AwesomeErrorDialog extends AwesomeDialogBuilder<AwesomeErrorDialog>
         setColoredCircle(R.color.dialogErrorBackgroundColor);
         setDialogIconAndColor(R.drawable.ic_dialog_error, R.color.white);
         setButtonBackgroundColor(R.color.dialogErrorBackgroundColor);
-        setButtonText(context.getString(R.string.dialog_ok_button));
-        setButtonTextColor(R.color.white);
         setCancelable(true);
     }
 
@@ -32,7 +30,7 @@ public class AwesomeErrorDialog extends AwesomeDialogBuilder<AwesomeErrorDialog>
         btDialogOk = findView(R.id.btDialogOk);
     }
 
-    public AwesomeErrorDialog setErrorButton(@Nullable final Closure selecteOk) {
+    public AwesomeErrorDialog setErrorButtonClick(@Nullable final Closure selecteOk) {
         btDialogOk.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -49,7 +47,6 @@ public class AwesomeErrorDialog extends AwesomeDialogBuilder<AwesomeErrorDialog>
     public AwesomeErrorDialog setButtonBackgroundColor(int buttonBackground) {
         if (btDialogOk != null) {
             btDialogOk.getBackground().setColorFilter(ContextCompat.getColor(getContext(), buttonBackground), PorterDuff.Mode.SRC_IN);
-            btDialogOk.setVisibility(View.VISIBLE);
         }
         return this;
     }
@@ -57,7 +54,6 @@ public class AwesomeErrorDialog extends AwesomeDialogBuilder<AwesomeErrorDialog>
     public AwesomeErrorDialog setButtonTextColor(int textColor) {
         if (btDialogOk != null) {
             btDialogOk.setTextColor(ContextCompat.getColor(getContext(), textColor));
-            btDialogOk.setVisibility(View.VISIBLE);
         }
         return this;
     }

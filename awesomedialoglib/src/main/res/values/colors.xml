@@ -3,7 +3,7 @@
     <color name="black">#000000</color>
     <color name="white">#FFFFFF</color>
     <color name="dialogInfoBackgroundColor">#2866BF</color>
-    <color name="dialogSuccessBackgroundColor">#059b39</color>
+    <color name="dialogSuccessBackgroundColor">#00b576</color>
     <color name="dialogProgressBackgroundColor">#2866BF</color>
     <color name="dialogErrorBackgroundColor">#C1272D</color>
     <color name="dialogWarningBackgroundColor">#f2c304</color>
