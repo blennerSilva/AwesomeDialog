@@ -6,39 +6,76 @@
     tools:context="com.awesomedialog.blennersilva.awesomedialog.MainActivity">
 
     <Button
+        android:id="@+id/btnError"
         android:layout_width="match_parent"
-        android:layout_height="60dp"
+        android:layout_height="40dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="50dp"
         android:background="#bf1313"
         android:text="Error Dialog"
-        android:layout_marginStart="5dp"
-        android:layout_marginEnd="5dp"
-        android:layout_marginTop="50dp"
-        android:textColor="#fff"
-        android:id="@+id/btnError"/>
+        android:textColor="#fff" />
 
     <Button
+        android:id="@+id/btnInfo"
         android:layout_width="match_parent"
-        android:layout_height="60dp"
+        android:layout_height="40dp"
+        android:layout_below="@id/btnError"
+        android:layout_marginEnd="5dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="10dp"
         android:background="#0861ce"
         android:text="Info Dialog"
-        android:layout_marginStart="5dp"
-        android:layout_marginEnd="5dp"
-        android:layout_marginTop="10dp"
-        android:textColor="#fff"
-        android:layout_below="@id/btnError"
-        android:id="@+id/btnInfo"/>
+        android:textColor="#fff" />
 
     <Button
-        android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:background="#08ce57"
-        android:text="Progress Dialog"
-        android:layout_marginTop="14dp"
-        android:textColor="#fff"
         android:id="@+id/btnProgress"
-        android:layout_marginStart="5dp"
-        android:layout_marginEnd="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_alignParentEnd="true"
         android:layout_below="@+id/btnInfo"
-        android:layout_alignParentEnd="true" />
+        android:layout_marginEnd="5dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="14dp"
+        android:background="#8c08ce"
+        android:text="Progress Dialog"
+        android:textColor="#fff" />
+
+    <Button
+        android:id="@+id/btnWarning"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@id/btnProgress"
+        android:layout_marginEnd="5dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="10dp"
+        android:background="#e1bc03"
+        android:text="Warning Dialog"
+        android:textColor="#fff" />
+
+    <Button
+        android:id="@+id/btnNotice"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@id/btnWarning"
+        android:layout_marginEnd="5dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="10dp"
+        android:background="#737373"
+        android:text="Notice Dialog"
+        android:textColor="#fff" />
+
+    <Button
+        android:id="@+id/btnSuccess"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@id/btnNotice"
+        android:layout_marginEnd="5dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="10dp"
+        android:background="#04c648"
+        android:text="Success Dialog"
+        android:textColor="#fff" />
+
 
 </RelativeLayout>

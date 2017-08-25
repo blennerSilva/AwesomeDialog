@@ -13,30 +13,35 @@ import com.awesomedialog.blennersilva.awesomedialoglibrary.interfaces.Closure;
  * Created by blennersilva on 23/08/17.
  */
 
-public class AwesomeInfoDialog extends AwesomeDialogBuilder<AwesomeInfoDialog> {
+public class AwesomeSuccessDialog extends AwesomeDialogBuilder<AwesomeSuccessDialog> {
 
     private Button positiveButton;
     private Button negativeButton;
+    private Button doneButton;
 
-    public AwesomeInfoDialog(Context context) {
+    public AwesomeSuccessDialog(Context context) {
         super(context);
 
-        setColoredCircle(R.color.dialogInfoBackgroundColor);
-        setDialogIconAndColor(R.drawable.ic_dialog_info, R.color.white);
-        setPositiveButtonbackgroundColor(R.color.dialogInfoBackgroundColor);
+        setColoredCircle(R.color.dialogSuccessBackgroundColor);
+        setDialogIconAndColor(R.drawable.ic_dialog_success, R.color.white);
+        setPositiveButtonbackgroundColor(R.color.dialogSuccessBackgroundColor);
         setPositiveButtonText(context.getString(R.string.dialog_yes_button));
         setPositiveButtonTextColor(R.color.white);
-        setNegativeButtonbackgroundColor(R.color.dialogInfoBackgroundColor);
+        setNegativeButtonbackgroundColor(R.color.dialogSuccessBackgroundColor);
         setNegativeButtonText(context.getString(R.string.dialog_no_button));
         setNegativeButtonTextColor(R.color.white);
+        setDoneButtonbackgroundColor(R.color.dialogSuccessBackgroundColor);
+        setDoneButtonText(context.getString(R.string.dialog_no_button));
+        setDoneButtonTextColor(R.color.white);
     }
 
     {
         positiveButton = findView(R.id.btDialogYes);
         negativeButton = findView(R.id.btDialogNo);
+        doneButton = findView(R.id.btDialogDone);
     }
 
-    public AwesomeInfoDialog setPositiveButton(@Nullable final Closure selectedYes) {
+    public AwesomeSuccessDialog setPositiveButton(@Nullable final Closure selectedYes) {
         positiveButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -51,7 +56,7 @@ public class AwesomeInfoDialog extends AwesomeDialogBuilder<AwesomeInfoDialog> {
         return this;
     }
 
-    public AwesomeInfoDialog setNegativeButton(@Nullable final Closure selectedNo) {
+    public AwesomeSuccessDialog setNegativeButton(@Nullable final Closure selectedNo) {
         negativeButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -67,7 +72,7 @@ public class AwesomeInfoDialog extends AwesomeDialogBuilder<AwesomeInfoDialog> {
     }
 
 
-    public AwesomeInfoDialog setPositiveButtonbackgroundColor(int buttonBackground) {
+    public AwesomeSuccessDialog setPositiveButtonbackgroundColor(int buttonBackground) {
         if (positiveButton != null) {
             positiveButton.getBackground().setColorFilter(ContextCompat.getColor(getContext(), buttonBackground), PorterDuff.Mode.SRC_IN);
             positiveButton.setVisibility(View.VISIBLE);
@@ -76,7 +81,7 @@ public class AwesomeInfoDialog extends AwesomeDialogBuilder<AwesomeInfoDialog> {
         return this;
     }
 
-    public AwesomeInfoDialog setPositiveButtonTextColor(int textColor) {
+    public AwesomeSuccessDialog setPositiveButtonTextColor(int textColor) {
         if (positiveButton != null) {
             positiveButton.setTextColor(ContextCompat.getColor(getContext(), textColor));
             positiveButton.setVisibility(View.VISIBLE);
@@ -85,7 +90,7 @@ public class AwesomeInfoDialog extends AwesomeDialogBuilder<AwesomeInfoDialog> {
         return this;
     }
 
-    public AwesomeInfoDialog setPositiveButtonText(String text) {
+    public AwesomeSuccessDialog setPositiveButtonText(String text) {
         if (positiveButton != null) {
             positiveButton.setText(text);
             positiveButton.setVisibility(View.VISIBLE);
@@ -94,7 +99,7 @@ public class AwesomeInfoDialog extends AwesomeDialogBuilder<AwesomeInfoDialog> {
         return this;
     }
 
-    public AwesomeInfoDialog setNegativeButtonbackgroundColor(int buttonBackground) {
+    public AwesomeSuccessDialog setNegativeButtonbackgroundColor(int buttonBackground) {
         if (negativeButton != null) {
             negativeButton.getBackground().setColorFilter(ContextCompat.getColor(getContext(), buttonBackground), PorterDuff.Mode.SRC_IN);
             negativeButton.setVisibility(View.VISIBLE);
@@ -103,7 +108,7 @@ public class AwesomeInfoDialog extends AwesomeDialogBuilder<AwesomeInfoDialog> {
         return this;
     }
 
-    public AwesomeInfoDialog setNegativeButtonText(String text) {
+    public AwesomeSuccessDialog setNegativeButtonText(String text) {
         if (negativeButton != null) {
             negativeButton.setText(text);
             negativeButton.setVisibility(View.VISIBLE);
@@ -112,7 +117,7 @@ public class AwesomeInfoDialog extends AwesomeDialogBuilder<AwesomeInfoDialog> {
         return this;
     }
 
-    public AwesomeInfoDialog setNegativeButtonTextColor(int textColor) {
+    public AwesomeSuccessDialog setNegativeButtonTextColor(int textColor) {
         if (negativeButton != null) {
             negativeButton.setTextColor(ContextCompat.getColor(getContext(), textColor));
             negativeButton.setVisibility(View.VISIBLE);
@@ -121,9 +126,36 @@ public class AwesomeInfoDialog extends AwesomeDialogBuilder<AwesomeInfoDialog> {
         return this;
     }
 
+    public AwesomeSuccessDialog setDoneButtonbackgroundColor(int buttonBackground) {
+        if (doneButton != null) {
+            doneButton.getBackground().setColorFilter(ContextCompat.getColor(getContext(), buttonBackground), PorterDuff.Mode.SRC_IN);
+            doneButton.setVisibility(View.VISIBLE);
+        }
+
+        return this;
+    }
+
+    public AwesomeSuccessDialog setDoneButtonText(String text) {
+        if (doneButton != null) {
+            doneButton.setText(text);
+            doneButton.setVisibility(View.VISIBLE);
+        }
+
+        return this;
+    }
+
+    public AwesomeSuccessDialog setDoneButtonTextColor(int textColor) {
+        if (doneButton != null) {
+            doneButton.setTextColor(ContextCompat.getColor(getContext(), textColor));
+            doneButton.setVisibility(View.VISIBLE);
+        }
+
+        return this;
+    }
+
 
     @Override
     protected int getLayout() {
-        return R.layout.dialog_info;
+        return R.layout.dialog_success;
     }
 }

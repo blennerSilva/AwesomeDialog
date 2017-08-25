@@ -14,15 +14,15 @@ import com.awesomedialog.blennersilva.awesomedialoglibrary.interfaces.Closure;
  */
 
 @SuppressWarnings("WeakerAccess")
-public class AwesomeErrorDialog extends AwesomeDialogBuilder<AwesomeErrorDialog> {
+public class AwesomeWarningDialog extends AwesomeDialogBuilder<AwesomeWarningDialog> {
     private Button btDialogOk;
 
-    public AwesomeErrorDialog(Context context) {
+    public AwesomeWarningDialog(Context context) {
         super(context);
 
-        setColoredCircle(R.color.dialogErrorBackgroundColor);
-        setDialogIconAndColor(R.drawable.ic_dialog_error, R.color.white);
-        setButtonBackgroundColor(R.color.dialogErrorBackgroundColor);
+        setColoredCircle(R.color.dialogWarningBackgroundColor);
+        setDialogIconAndColor(R.drawable.ic_dialog_warning, R.color.white);
+        setButtonBackgroundColor(R.color.dialogWarningBackgroundColor);
         setButtonText(context.getString(R.string.dialog_ok_button));
         setButtonTextColor(R.color.white);
         setCancelable(true);
@@ -32,7 +32,7 @@ public class AwesomeErrorDialog extends AwesomeDialogBuilder<AwesomeErrorDialog>
         btDialogOk = findView(R.id.btDialogOk);
     }
 
-    public AwesomeErrorDialog setErrorButton(@Nullable final Closure selecteOk) {
+    public AwesomeWarningDialog setErrorButton(@Nullable final Closure selecteOk) {
         btDialogOk.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -46,7 +46,7 @@ public class AwesomeErrorDialog extends AwesomeDialogBuilder<AwesomeErrorDialog>
         return this;
     }
 
-    public AwesomeErrorDialog setButtonBackgroundColor(int buttonBackground) {
+    public AwesomeWarningDialog setButtonBackgroundColor(int buttonBackground) {
         if (btDialogOk != null) {
             btDialogOk.getBackground().setColorFilter(ContextCompat.getColor(getContext(), buttonBackground), PorterDuff.Mode.SRC_IN);
             btDialogOk.setVisibility(View.VISIBLE);
@@ -54,7 +54,7 @@ public class AwesomeErrorDialog extends AwesomeDialogBuilder<AwesomeErrorDialog>
         return this;
     }
 
-    public AwesomeErrorDialog setButtonTextColor(int textColor) {
+    public AwesomeWarningDialog setButtonTextColor(int textColor) {
         if (btDialogOk != null) {
             btDialogOk.setTextColor(ContextCompat.getColor(getContext(), textColor));
             btDialogOk.setVisibility(View.VISIBLE);
@@ -62,7 +62,7 @@ public class AwesomeErrorDialog extends AwesomeDialogBuilder<AwesomeErrorDialog>
         return this;
     }
 
-    public AwesomeErrorDialog setButtonText(String text) {
+    public AwesomeWarningDialog setButtonText(String text) {
         if (btDialogOk != null) {
             btDialogOk.setText(text);
             btDialogOk.setVisibility(View.VISIBLE);
@@ -72,6 +72,6 @@ public class AwesomeErrorDialog extends AwesomeDialogBuilder<AwesomeErrorDialog>
 
     @Override
     protected int getLayout() {
-        return R.layout.dialog_error;
+        return R.layout.dialog_warning;
     }
 }

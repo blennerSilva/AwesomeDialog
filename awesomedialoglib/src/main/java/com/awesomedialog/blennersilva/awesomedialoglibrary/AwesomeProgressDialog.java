@@ -15,13 +15,16 @@ public class AwesomeProgressDialog extends AwesomeDialogBuilder<AwesomeProgressD
 
     public AwesomeProgressDialog(Context context) {
         super(context);
+
+        setColoredCircle(R.color.dialogProgressBackgroundColor);
+        setProgressBarColor(R.color.white);
     }
 
     {
         progressBar = findView(R.id.dialog_progress_bar);
     }
 
-    public AwesomeProgressDialog setProgressBarColor(int color){
+    public AwesomeProgressDialog setProgressBarColor(int color) {
         progressBar.getIndeterminateDrawable().setColorFilter(ContextCompat.getColor(getContext(), R.color.white), PorterDuff.Mode.SRC_IN);
         return this;
     }

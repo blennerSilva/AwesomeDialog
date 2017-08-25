@@ -7,8 +7,10 @@ import android.widget.Button;
 
 import com.awesomedialog.blennersilva.awesomedialoglibrary.AwesomeErrorDialog;
 import com.awesomedialog.blennersilva.awesomedialoglibrary.AwesomeInfoDialog;
+import com.awesomedialog.blennersilva.awesomedialoglibrary.AwesomeNoticeDialog;
 import com.awesomedialog.blennersilva.awesomedialoglibrary.AwesomeProgressDialog;
-import com.awesomedialog.blennersilva.awesomedialoglibrary.interfaces.Closure;
+import com.awesomedialog.blennersilva.awesomedialoglibrary.AwesomeSuccessDialog;
+import com.awesomedialog.blennersilva.awesomedialoglibrary.AwesomeWarningDialog;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -40,10 +42,35 @@ public class MainActivity extends AppCompatActivity {
                 showProgressDialog();
             }
         });
+
+        Button btnWarning = (Button) findViewById(R.id.btnWarning);
+        btnWarning.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                showWarningDialog();
+            }
+        });
+
+        Button btnNotice = (Button) findViewById(R.id.btnNotice);
+        btnNotice.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                showNoticeDialog();
+            }
+        });
+
+        Button btnSuccess = (Button) findViewById(R.id.btnSuccess);
+        btnSuccess.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                showSuccessDialog();
+            }
+        });
     }
 
     private void showErrorDialog() {
-        new AwesomeErrorDialog(this)
+        new AwesomeErrorDialog(this).show();
+        /*new AwesomeErrorDialog(this)
                 .setTitle(R.string.app_name)
                 .setMessage(R.string.app_name)
                 .setColoredCircle(R.color.dialogErrorBackgroundColor)
@@ -55,11 +82,12 @@ public class MainActivity extends AppCompatActivity {
                     public void exec() {
 
                     }
-                }).show();
+                }).show();*/
     }
 
     private void showInfoDialog() {
-        new AwesomeInfoDialog(this)
+        new AwesomeInfoDialog(this).show();
+       /* new AwesomeInfoDialog(this)
                 .setTitle(R.string.app_name)
                 .setMessage(R.string.app_name)
                 .setColoredCircle(R.color.dialogInfoBackgroundColor)
@@ -79,16 +107,29 @@ public class MainActivity extends AppCompatActivity {
 
                     }
                 })
-                .show();
+                .show();*/
     }
 
-    private void showProgressDialog(){
-        new AwesomeProgressDialog(this)
+    private void showProgressDialog() {
+        new AwesomeProgressDialog(this).show();
+        /*new AwesomeProgressDialog(this)
                 .setTitle(R.string.app_name)
                 .setMessage(R.string.app_name)
                 .setColoredCircle(R.color.dialogProgressBackgroundColor)
                 .setCancelable(true)
                 .setProgressBarColor(R.color.white)
-                .show();
+                .show();*/
+    }
+
+    private void showWarningDialog() {
+        new AwesomeWarningDialog(this).show();
+    }
+
+    private void showNoticeDialog() {
+        new AwesomeNoticeDialog(this).show();
+    }
+
+    private void showSuccessDialog() {
+        new AwesomeSuccessDialog(this).show();
     }
 }
