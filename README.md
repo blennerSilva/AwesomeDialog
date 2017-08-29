@@ -1,6 +1,6 @@
 # AwesomeDialog
 
-This library is a set of simple wrapper classes that are created to help you easily make SCLA like dialogs.
+This library is a set of simple wrapper classes that was created to help you easily make SCLA like dialogs.
 
 [![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-AwesomeDialog-green.svg?style=true)](https://android-arsenal.com/details/1/6109)
 
