@@ -48,11 +48,11 @@ public class AwesomeCustomDialog extends AwesomeDialogBuilder<AwesomeCustomDialo
         positiveButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (selectedCustom != null) {
-                    selectedCustom.exec(editText);
-                }
-
-                hide();
+              if (selectedCustom != null) {
+                  if(selectedCustom.exec(editText))
+                      hide();
+              }else
+                  hide();
             }
         });
 
