@@ -19,7 +19,7 @@ import com.awesomedialog.blennersilva.awesomedialoglibrary.interfaces.ClosureEdi
 
 public class AwesomeCustomDialog extends AwesomeDialogBuilder<AwesomeCustomDialog> {
 
-    private Button positiveButton;
+    private Button customButton;
     private Button negativeButton;
     private Button doneButton;
     private EditText editText;
@@ -30,14 +30,13 @@ public class AwesomeCustomDialog extends AwesomeDialogBuilder<AwesomeCustomDialo
         setColoredCircle(R.color.dialogCustomBackgroundColor);
         setDialogIconAndColor(R.drawable.ic_dialog_info, R.color.white);
         setNegativeButtonbackgroundColor(R.color.dialogCustomBackgroundColor);
-        setPositiveButtonbackgroundColor(R.color.dialogCustomBackgroundColor);
         setCustomButtonbackgroundColor(R.color.dialogCustomBackgroundColor);
         setDoneButtonbackgroundColor(R.color.dialogCustomBackgroundColor);
         setEditTextUnderlineColor(R.color.dialogCustomBackgroundColor);
     }
 
     {
-        positiveButton = findView(R.id.btDialogYes);
+        customButton = findView(R.id.btDialogYes);
         negativeButton = findView(R.id.btDialogNo);
         doneButton = findView(R.id.btDialogDone);
         editText = findView(R.id.dialog_edittext);
@@ -45,7 +44,7 @@ public class AwesomeCustomDialog extends AwesomeDialogBuilder<AwesomeCustomDialo
 
 
     public AwesomeCustomDialog setCustomButtonClick(@Nullable final ClosureEdit selectedCustom) {
-        positiveButton.setOnClickListener(new View.OnClickListener() {
+        customButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
               if (selectedCustom != null) {
@@ -53,21 +52,6 @@ public class AwesomeCustomDialog extends AwesomeDialogBuilder<AwesomeCustomDialo
                       hide();
               }else
                   hide();
-            }
-        });
-
-        return this;
-    }
-
-    public AwesomeCustomDialog setPositiveButtonClick(@Nullable final Closure selectedYes) {
-        positiveButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                if (selectedYes != null) {
-                    selectedYes.exec();
-                }
-
-                hide();
             }
         });
 
@@ -104,17 +88,10 @@ public class AwesomeCustomDialog extends AwesomeDialogBuilder<AwesomeCustomDialo
         return this;
     }
 
-    public AwesomeCustomDialog showPositiveButton(boolean show) {
-        if (positiveButton != null) {
-            positiveButton.setVisibility(View.VISIBLE);
-        }
-
-        return this;
-    }
 
     public AwesomeCustomDialog showCustomButton(boolean show) {
-        if (positiveButton != null) {
-            positiveButton.setVisibility(View.VISIBLE);
+        if (customButton != null) {
+            customButton.setVisibility(View.VISIBLE);
         }
 
         return this;
@@ -136,51 +113,27 @@ public class AwesomeCustomDialog extends AwesomeDialogBuilder<AwesomeCustomDialo
         return this;
     }
 
-    public AwesomeCustomDialog setPositiveButtonbackgroundColor(int buttonBackground) {
-        if (positiveButton != null) {
-            positiveButton.getBackground().setColorFilter(ContextCompat.getColor(getContext(), buttonBackground), PorterDuff.Mode.SRC_IN);
-        }
-
-        return this;
-    }
-
-    public AwesomeCustomDialog setPositiveButtonTextColor(int textColor) {
-        if (positiveButton != null) {
-            positiveButton.setTextColor(ContextCompat.getColor(getContext(), textColor));
-        }
-
-        return this;
-    }
-
-    public AwesomeCustomDialog setPositiveButtonText(String text) {
-        if (positiveButton != null) {
-            positiveButton.setText(text);
-            positiveButton.setVisibility(View.VISIBLE);
-        }
-
-        return this;
-    }
 
     public AwesomeCustomDialog setCustomButtonbackgroundColor(int buttonBackground) {
-        if (positiveButton != null) {
-            positiveButton.getBackground().setColorFilter(ContextCompat.getColor(getContext(), buttonBackground), PorterDuff.Mode.SRC_IN);
+        if (customButton != null) {
+            customButton.getBackground().setColorFilter(ContextCompat.getColor(getContext(), buttonBackground), PorterDuff.Mode.SRC_IN);
         }
 
         return this;
     }
 
     public AwesomeCustomDialog setCustomButtonTextColor(int textColor) {
-        if (positiveButton != null) {
-            positiveButton.setTextColor(ContextCompat.getColor(getContext(), textColor));
+        if (customButton != null) {
+            customButton.setTextColor(ContextCompat.getColor(getContext(), textColor));
         }
 
         return this;
     }
 
     public AwesomeCustomDialog setCustomButtonText(String text) {
-        if (positiveButton != null) {
-            positiveButton.setText(text);
-            positiveButton.setVisibility(View.VISIBLE);
+        if (customButton != null) {
+            customButton.setText(text);
+            customButton.setVisibility(View.VISIBLE);
         }
 
         return this;

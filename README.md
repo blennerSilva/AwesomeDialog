@@ -20,7 +20,7 @@ compile on your dependencies
 
 ```
 dependencies {
-	compile 'com.github.blennerSilva:AwesomeDialog:2.0.1'
+	compile 'com.github.eminsr:AwesomeDialog:master-SNAPSHOT'
 }
 ```
 
@@ -39,6 +39,7 @@ Each Dialog has its own top color, icon, title and message + its own featured. T
 * [AwesomeWarningDialog](#awesomewarningdialog)
 * [AwesomeNoticeDialog](#awesomenoticedialog)
 * [AwesomeSuccessDialog](#awesomesuccessdialog)
+* [AwesomeCustomDialog](#awesomecustomdialog)
 
 #### AwesomeInfoDialog
 You can set posite and negative buttons here. Closures can be individually set for each button (onClick of any
@@ -176,6 +177,38 @@ new AwesomeSuccessDialog(this)
                     @Override
                     public void exec() {
                         //click
+                    }
+                })
+                .show();
+```
+
+#### AwesomeCustomDialog
+Displays a success message, a textedit and max of three buttons
+
+```java
+new AwesomeCustomDialog(this)
+                .setTitle(R.string.app_name)
+                .setMessage(R.string.app_name)
+                .setColoredCircle(R.color.dialogCustomBackgroundColor)
+                .setDialogIconAndColor(R.drawable.ic_dialog_info, R.color.white)
+                .setCancelable(true)
+                .setEditTextUnderlineColor(R.color.dialogCustomBackgroundColor)
+                .setEditTextColor(R.color.dialogCustomBackgroundColor)
+                .setCustomButtonText(getString(R.string.dialog_ok_button))
+                .setCustomButtonClick(new ClosureEdit() {
+                    @Override
+                    public Boolean exec(EditText editText) {
+                        //click
+
+                        return false;//return true; to hide the dialog
+                    }
+                })
+                .setDoneButtonText(getString(R.string.dialog_done_button))
+                .setDoneButtonClick(new Closure() {
+                    @Override
+                    public void exec() {
+                        //click
+
                     }
                 })
                 .show();
