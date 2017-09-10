@@ -70,7 +70,7 @@ button with closure the button will be dismissed).
                     }
                 })
                 .show();
-                
+
 ```
 #### AwesomeErrorDialog
 Display an Error dialog with one button
@@ -104,7 +104,7 @@ Display a Progress Dialog
                 .setDialogIconAndColor(R.drawable.ic_dialog_info, R.color.white)
                 .setCancelable(true)
                 .show();
-                
+
 ```
 #### AwesomeWarningDialog
 Display Warning to user with or without button
@@ -113,11 +113,11 @@ Display Warning to user with or without button
 new AwesomeWarningDialog(this)
                 .setTitle(R.string.app_name)
                 .setMessage(R.string.app_name)
-                .setColoredCircle(R.color.dialogNoticeBackgroundColor)
-                .setDialogIconAndColor(R.drawable.ic_notice, R.color.white)
+                .setColoredCircle(R.color.dialogWarningBackgroundColor)
+                .setDialogIconAndColor(R.drawable.ic_warning, R.color.white)
                 .setCancelable(true)
                 .setButtonText(getString(R.string.dialog_ok_button))
-                .setButtonBackgroundColor(R.color.dialogNoticeBackgroundColor)
+                .setButtonBackgroundColor(R.color.dialogWarningBackgroundColor)
                 .setButtonText(getString(R.string.dialog_ok_button))
                 .setWarningButtonClick(new Closure() {
                     @Override
@@ -126,10 +126,10 @@ new AwesomeWarningDialog(this)
                     }
                 })
                 .show();
-                
+
 ```
 #### AwesomeNoticeDialog
-Display notice to user 
+Display notice to user
 
 ```java
 new AwesomeNoticeDialog(this)
@@ -153,7 +153,7 @@ new AwesomeNoticeDialog(this)
 #### AwesomeSuccessDialog
 Displays a success message, with max of three buttons
 
-```java 
+```java
 new AwesomeSuccessDialog(this)
                 .setTitle(R.string.app_name)
                 .setMessage(R.string.app_name)
@@ -200,3 +200,6 @@ new AwesomeSuccessDialog(this)
 
 ## Success
 <img src="https://github.com/blennerSilva/AwesomeDialog/blob/master/awesomedialoglib/extras/screenshots/success.png" width="300" >
+
+## Custom with EditText
+<img src="https://github.com/blennerSilva/AwesomeDialog/blob/master/awesomedialoglib/extras/screenshots/custom.png" width="300" >
