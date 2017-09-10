@@ -77,5 +77,16 @@
         android:text="Success Dialog"
         android:textColor="#fff" />
 
+    <Button
+          android:id="@+id/btnCustom"
+          android:layout_width="match_parent"
+          android:layout_height="40dp"
+          android:layout_below="@id/btnSuccess"
+          android:layout_marginEnd="5dp"
+          android:layout_marginStart="5dp"
+          android:layout_marginTop="10dp"
+          android:background="#13cfec"
+          android:text="Custom Dialog"
+          android:textColor="#fff" />
 
 </RelativeLayout>
