@@ -7,5 +7,5 @@ import android.widget.EditText;
  */
 
 public interface ClosureEdit {
-    void exec(EditText editText);
+    Boolean exec(EditText editText);
 }

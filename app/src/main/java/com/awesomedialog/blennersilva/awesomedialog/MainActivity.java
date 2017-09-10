@@ -106,8 +106,9 @@ public class MainActivity extends AppCompatActivity {
                 .setCustomButtonText(getString(R.string.dialog_ok_button))
                 .setCustomButtonClick(new ClosureEdit() {
                     @Override
-                    public void exec(EditText editText) {
+                    public Boolean exec(EditText editText) {
                         Toast.makeText(MainActivity.this, ""+editText.getText().toString(), Toast.LENGTH_SHORT).show();
+                        return true;
                     }
                 })
                 .setDoneButtonText(getString(R.string.dialog_done_button)).show();
