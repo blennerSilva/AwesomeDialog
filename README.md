@@ -28,7 +28,7 @@ dependencies {
 # Wiki
 
 ## General
-[sample module](https://github.com/blennerSilva/AwesomeDialog/tree/master/app/src/main/java/com/awesomedialog/blennersilva/awesomedialog).
+[sample module](https://github.com/eminsr/AwesomeDialog/tree/master/app/src/main/java/com/awesomedialog/blennersilva/awesomedialog).
 
 ### Dialog Types
 
