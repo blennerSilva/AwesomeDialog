@@ -2,16 +2,22 @@ package com.awesomedialog.blennersilva.awesomedialog;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.text.Spanned;
+import android.text.SpannedString;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
+import android.widget.Toast;
 
+import com.awesomedialog.blennersilva.awesomedialoglibrary.AwesomeCustomDialog;
 import com.awesomedialog.blennersilva.awesomedialoglibrary.AwesomeErrorDialog;
 import com.awesomedialog.blennersilva.awesomedialoglibrary.AwesomeInfoDialog;
 import com.awesomedialog.blennersilva.awesomedialoglibrary.AwesomeNoticeDialog;
 import com.awesomedialog.blennersilva.awesomedialoglibrary.AwesomeProgressDialog;
 import com.awesomedialog.blennersilva.awesomedialoglibrary.AwesomeSuccessDialog;
 import com.awesomedialog.blennersilva.awesomedialoglibrary.AwesomeWarningDialog;
-import com.awesomedialog.blennersilva.awesomedialoglibrary.interfaces.Closure;
+import com.awesomedialog.blennersilva.awesomedialoglibrary.AwesomeWebDialog;
+import com.awesomedialog.blennersilva.awesomedialoglibrary.interfaces.ClosureEdit;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -75,6 +81,14 @@ public class MainActivity extends AppCompatActivity {
                 showCustomDialog();
             }
         });
+
+        Button btnWeb = (Button) findViewById(R.id.btnWeb);
+        btnWeb.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                showWebDialog();
+            }
+        });
     }
 
     private void showErrorDialog() {
@@ -112,5 +126,12 @@ public class MainActivity extends AppCompatActivity {
                     }
                 })
                 .setDoneButtonText(getString(R.string.dialog_done_button)).show();
+    }
+
+    private void showWebDialog(){
+        new AwesomeWebDialog(this)
+                .setMessageMovementWithMaxHight(300)
+                .setButtonText(getString(R.string.dialog_ok_button))
+                .show();
     }
 }

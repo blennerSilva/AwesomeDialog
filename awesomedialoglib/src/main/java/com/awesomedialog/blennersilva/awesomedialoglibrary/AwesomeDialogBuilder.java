@@ -9,6 +9,10 @@ import android.graphics.drawable.Drawable;
 import android.support.annotation.StringRes;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AlertDialog;
+import android.text.Spannable;
+import android.text.Spanned;
+import android.text.method.ScrollingMovementMethod;
+import android.util.DisplayMetrics;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.Window;
@@ -77,6 +81,27 @@ public abstract class AwesomeDialogBuilder<T extends AwesomeDialogBuilder> {
             tvMessage.setText(message);
         }
 
+        return (T) this;
+    }
+
+    public T setMessage(Spanned message) {
+        if (tvMessage != null) {
+            tvMessage.setText(message);
+        }
+
+        return (T) this;
+    }
+
+
+    public T setMessageMovementWithMaxHight(int dip) {
+
+        DisplayMetrics displayMetrics = getContext().getResources().getDisplayMetrics();
+        dip = Math.round(dip * (displayMetrics.xdpi / DisplayMetrics.DENSITY_DEFAULT));
+
+        if (tvMessage != null) {
+            tvMessage.setMovementMethod(new ScrollingMovementMethod());
+            tvMessage.setMaxHeight(dip);
+        }
         return (T) this;
     }
 

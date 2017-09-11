@@ -40,6 +40,7 @@ Each Dialog has its own top color, icon, title and message + its own featured. T
 * [AwesomeNoticeDialog](#awesomenoticedialog)
 * [AwesomeSuccessDialog](#awesomesuccessdialog)
 * [AwesomeCustomDialog](#awesomecustomdialog)
+* [AwesomeWebDialog](#awesomewebdialog)
 
 #### AwesomeInfoDialog
 You can set posite and negative buttons here. Closures can be individually set for each button (onClick of any
@@ -183,7 +184,7 @@ new AwesomeSuccessDialog(this)
 ```
 
 #### AwesomeCustomDialog
-Displays a success message, a textedit and max of three buttons
+Displays a message, a textedit and max of three buttons
 
 ```java
 new AwesomeCustomDialog(this)
@@ -213,6 +214,33 @@ new AwesomeCustomDialog(this)
                 })
                 .show();
 ```
+
+#### AwesomeWebDialog
+Displays a message that contains html tags and max of one button
+setMessage now accepts Spanned and you can set the max height of the textview that shows the message and make it scrollable.
+
+```java
+new AwesomeWebDialog(this)
+                .setTitle(R.string.app_name)
+                .setMessage(R.string.app_name)
+                .setMessageMovementWithMaxHight(300)
+                .setCancelable(true)
+                .setColoredCircle(R.color.dialogWebBackgroundColor)
+                .setButtonText(getString(R.string.dialog_ok_button))
+                .setButtonBackgroundColor(R.color.dialogWebBackgroundColor)
+                .setWebButtonClick(new Closure() {
+                    @Override
+                    public void exec() {
+
+                    }
+                })
+                .show();
+```
+
+Web icon: By Yannick
+<div>Icons made by <a href="https://www.flaticon.com/authors/yannick" title="Yannick">Yannick</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
+
+
 
 # Screenshots
 
