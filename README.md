@@ -43,6 +43,7 @@ Each Dialog has its own top color, icon, title and message + its own featured. T
 * [AwesomeSuccessDialog](#awesomesuccessdialog)
 * [AwesomeCustomDialog](#awesomecustomdialog)
 * [AwesomeWebDialog](#awesomewebdialog)
+* [AwesomePickerDialog](#awesomepickerdialog)
 
 #### AwesomeInfoDialog
 You can set posite and negative buttons here. Closures can be individually set for each button (onClick of any
