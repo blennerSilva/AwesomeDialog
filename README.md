@@ -40,6 +40,7 @@ Each Dialog has its own top color, icon, title and message + its own featured. T
 * [AwesomeNoticeDialog](#awesomenoticedialog)
 * [AwesomeSuccessDialog](#awesomesuccessdialog)
 * [AwesomeCustomDialog](#awesomecustomdialog)
+* [AwesomeWebDialog](#awesomewebdialog)
 
 #### AwesomeInfoDialog
 You can set posite and negative buttons here. Closures can be individually set for each button (onClick of any
@@ -183,7 +184,7 @@ new AwesomeSuccessDialog(this)
 ```
 
 #### AwesomeCustomDialog
-Displays a success message, a textedit and max of three buttons
+Displays a message, a textedit and max of three buttons
 
 ```java
 new AwesomeCustomDialog(this)
@@ -214,6 +215,58 @@ new AwesomeCustomDialog(this)
                 .show();
 ```
 
+#### AwesomeWebDialog
+Displays a message that contains html tags and max of one button
+setMessage now accepts Spanned and you can set the max height of the textview that shows the message and make it scrollable.
+
+```java
+new AwesomeWebDialog(this)
+                .setTitle(R.string.app_name)
+                .setMessage(R.string.app_name)
+                .setMessageMovementWithMaxHight(300)
+                .setCancelable(true)
+                .setColoredCircle(R.color.dialogWebBackgroundColor)
+                .setButtonText(getString(R.string.dialog_ok_button))
+                .setButtonBackgroundColor(R.color.dialogWebBackgroundColor)
+                .setWebButtonClick(new Closure() {
+                    @Override
+                    public void exec() {
+
+                    }
+                })
+                .show();
+```
+
+Web icon: By Yannick
+<div>Icons made by <a href="https://www.flaticon.com/authors/yannick" title="Yannick">Yannick</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
+
+#### AwesomePickerDialog
+Displays an array of icons and their labels(@Nullable) 
+You can set the max height of the images. onClick returns the current items index number.
+
+```java
+new AwesomePickerDialog(this)
+                    .setTitle(R.string.app_name)
+                    .setMessage(R.string.app_name)
+                    .setCancelable(true)
+                    .setPickerContent(new int[]{R.drawable.emoji,R.drawable.emoji2}, new String[]{getString(R.string.dialog_yes_button),getString(R.string.dialog_no_button)})
+                    .setPickerButtonText(getString(R.string.dialog_ok_button))
+                    .setContentHeight(100)
+                    .setBackButtonBackgroundColor(R.color.dialogPickerBackgroundColor)
+                    .setForwardButtonBackgroundColor(R.color.dialogPickerBackgroundColor)
+                    .setPickerButtonBackgroundColor(R.color.dialogPickerBackgroundColor)
+                    .setColoredCircle(R.color.colorWhite)
+                    .setDialogIconAndColor(R.drawable.ic_notice, R.color.white)
+                    .setPickerButtonClick(new ClosurePicker() {
+                        @Override
+                        public void exec(int current) {
+                            //click
+                        }
+                    })
+                    .show();
+```
+
+
 # Screenshots
 
 ## Info
@@ -236,3 +289,6 @@ new AwesomeCustomDialog(this)
 
 ## Custom with EditText
 <img src="https://github.com/eminsr/AwesomeDialog/blob/master/awesomedialoglib/extras/screenshots/custom.png" width="300" >
+
+## Picker
+<img src="https://github.com/eminsr/AwesomeDialog/blob/master/awesomedialoglib/extras/screenshots/picker.png" width="300" >

@@ -78,15 +78,39 @@
         android:textColor="#fff" />
 
     <Button
-          android:id="@+id/btnCustom"
-          android:layout_width="match_parent"
-          android:layout_height="40dp"
-          android:layout_below="@id/btnSuccess"
-          android:layout_marginEnd="5dp"
-          android:layout_marginStart="5dp"
-          android:layout_marginTop="10dp"
-          android:background="#13cfec"
-          android:text="Custom Dialog"
-          android:textColor="#fff" />
+        android:id="@+id/btnCustom"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@id/btnSuccess"
+        android:layout_marginEnd="5dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="10dp"
+        android:background="#13cfec"
+        android:text="Custom Dialog"
+        android:textColor="#fff" />
+
+    <Button
+        android:id="@+id/btnWeb"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@id/btnCustom"
+        android:layout_marginEnd="5dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="10dp"
+        android:background="#1b2e31"
+        android:text="Web Dialog"
+        android:textColor="#fff" />
+
+    <Button
+        android:id="@+id/btnPicker"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@id/btnWeb"
+        android:layout_marginEnd="5dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="10dp"
+        android:background="#df6b99"
+        android:text="Picker Dialog"
+        android:textColor="#fff" />
 
 </RelativeLayout>
