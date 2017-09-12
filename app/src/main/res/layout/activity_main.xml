@@ -101,4 +101,16 @@
         android:text="Web Dialog"
         android:textColor="#fff" />
 
+    <Button
+        android:id="@+id/btnPicker"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@id/btnWeb"
+        android:layout_marginEnd="5dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="10dp"
+        android:background="#df6b99"
+        android:text="Picker Dialog"
+        android:textColor="#fff" />
+
 </RelativeLayout>
