@@ -6,6 +6,7 @@ import android.support.annotation.Nullable;
 import android.support.v4.content.ContextCompat;
 import android.view.View;
 import android.widget.Button;
+import android.widget.RelativeLayout;
 
 import com.awesomedialog.blennersilva.awesomedialoglibrary.interfaces.Closure;
 
@@ -16,6 +17,7 @@ import com.awesomedialog.blennersilva.awesomedialoglibrary.interfaces.Closure;
 @SuppressWarnings("WeakerAccess")
 public class AwesomeErrorDialog extends AwesomeDialogBuilder<AwesomeErrorDialog> {
     private Button btDialogOk;
+    private RelativeLayout dialogBody;
 
     public AwesomeErrorDialog(Context context) {
         super(context);
@@ -28,6 +30,15 @@ public class AwesomeErrorDialog extends AwesomeDialogBuilder<AwesomeErrorDialog>
 
     {
         btDialogOk = findView(R.id.btDialogOk);
+        dialogBody = findView(R.id.dialog_body);
+    }
+
+    public AwesomeErrorDialog setDialogBodyBackgroundColor(int color){
+        if (dialogBody != null) {
+            dialogBody.getBackground().setColorFilter(ContextCompat.getColor(getContext(), color), PorterDuff.Mode.SRC_IN);
+        }
+
+        return this;
     }
 
     public AwesomeErrorDialog setErrorButtonClick(@Nullable final Closure selecteOk) {

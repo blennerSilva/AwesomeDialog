@@ -6,6 +6,7 @@ import android.support.annotation.Nullable;
 import android.support.v4.content.ContextCompat;
 import android.view.View;
 import android.widget.Button;
+import android.widget.RelativeLayout;
 
 import com.awesomedialog.blennersilva.awesomedialoglibrary.interfaces.Closure;
 
@@ -17,6 +18,7 @@ public class AwesomeInfoDialog extends AwesomeDialogBuilder<AwesomeInfoDialog> {
 
     private Button positiveButton;
     private Button negativeButton;
+    private RelativeLayout dialogBody;
 
     public AwesomeInfoDialog(Context context) {
         super(context);
@@ -31,6 +33,15 @@ public class AwesomeInfoDialog extends AwesomeDialogBuilder<AwesomeInfoDialog> {
     {
         positiveButton = findView(R.id.btDialogYes);
         negativeButton = findView(R.id.btDialogNo);
+        dialogBody = findView(R.id.dialog_body);
+    }
+
+    public AwesomeInfoDialog setDialogBodyBackgroundColor(int color){
+        if (dialogBody != null) {
+            dialogBody.getBackground().setColorFilter(ContextCompat.getColor(getContext(), color), PorterDuff.Mode.SRC_IN);
+        }
+
+        return this;
     }
 
     public AwesomeInfoDialog setPositiveButtonClick(@Nullable final Closure selectedYes) {

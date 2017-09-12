@@ -6,6 +6,7 @@ import android.support.annotation.Nullable;
 import android.support.v4.content.ContextCompat;
 import android.view.View;
 import android.widget.Button;
+import android.widget.RelativeLayout;
 
 import com.awesomedialog.blennersilva.awesomedialoglibrary.interfaces.Closure;
 
@@ -18,6 +19,7 @@ public class AwesomeSuccessDialog extends AwesomeDialogBuilder<AwesomeSuccessDia
     private Button positiveButton;
     private Button negativeButton;
     private Button doneButton;
+    private RelativeLayout dialogBody;
 
     public AwesomeSuccessDialog(Context context) {
         super(context);
@@ -33,6 +35,15 @@ public class AwesomeSuccessDialog extends AwesomeDialogBuilder<AwesomeSuccessDia
         positiveButton = findView(R.id.btDialogYes);
         negativeButton = findView(R.id.btDialogNo);
         doneButton = findView(R.id.btDialogDone);
+        dialogBody = findView(R.id.dialog_body);
+    }
+
+    public AwesomeSuccessDialog setDialogBodyBackgroundColor(int color){
+        if (dialogBody != null) {
+            dialogBody.getBackground().setColorFilter(ContextCompat.getColor(getContext(), color), PorterDuff.Mode.SRC_IN);
+        }
+
+        return this;
     }
 
     public AwesomeSuccessDialog setPositiveButtonClick(@Nullable final Closure selectedYes) {

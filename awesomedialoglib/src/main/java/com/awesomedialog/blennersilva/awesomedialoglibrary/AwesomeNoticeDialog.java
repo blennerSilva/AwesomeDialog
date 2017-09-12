@@ -6,6 +6,7 @@ import android.support.annotation.Nullable;
 import android.support.v4.content.ContextCompat;
 import android.view.View;
 import android.widget.Button;
+import android.widget.RelativeLayout;
 
 import com.awesomedialog.blennersilva.awesomedialoglibrary.interfaces.Closure;
 
@@ -16,6 +17,7 @@ import com.awesomedialog.blennersilva.awesomedialoglibrary.interfaces.Closure;
 @SuppressWarnings("WeakerAccess")
 public class AwesomeNoticeDialog extends AwesomeDialogBuilder<AwesomeNoticeDialog> {
     private Button btDialogOk;
+    private RelativeLayout dialogBody;
 
     public AwesomeNoticeDialog(Context context) {
         super(context);
@@ -28,6 +30,15 @@ public class AwesomeNoticeDialog extends AwesomeDialogBuilder<AwesomeNoticeDialo
 
     {
         btDialogOk = findView(R.id.btDialogOk);
+        dialogBody = findView(R.id.dialog_body);
+    }
+
+    public AwesomeNoticeDialog setDialogBodyBackgroundColor(int color){
+        if (dialogBody != null) {
+            dialogBody.getBackground().setColorFilter(ContextCompat.getColor(getContext(), color), PorterDuff.Mode.SRC_IN);
+        }
+
+        return this;
     }
 
     public AwesomeNoticeDialog setNoticeButtonClick(@Nullable final Closure selecteOk) {
