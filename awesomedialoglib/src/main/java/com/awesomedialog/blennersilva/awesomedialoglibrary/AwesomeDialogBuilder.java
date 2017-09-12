@@ -1,5 +1,6 @@
 package com.awesomedialog.blennersilva.awesomedialoglibrary;
 
+import android.app.Activity;
 import android.app.Dialog;
 import android.content.Context;
 import android.graphics.Color;
@@ -9,6 +10,7 @@ import android.graphics.drawable.Drawable;
 import android.support.annotation.StringRes;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AlertDialog;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.Window;
@@ -100,11 +102,27 @@ public abstract class AwesomeDialogBuilder<T extends AwesomeDialogBuilder> {
     }
 
     public Dialog show() {
-        dialog.show();
+        try {
+            if (context instanceof Activity) {
+                if (!((Activity) context).isFinishing()) {
+                    dialog.show();
+                }
+            } else {
+                dialog.show();
+            }
+        } catch (Exception e) {
+            Log.e("[AwSDialog:showAlert]", "Erro ao exibir alert");
+        }
+
         return dialog;
     }
 
     public Dialog hide() {
+        try {
+            dialog.dismiss();
+        } catch (Exception e) {
+            Log.d("[AwSDialog : dismiss]", " Erro ao remover diálogo (%s)");
+        }
         dialog.dismiss();
         return dialog;
     }
