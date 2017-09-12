@@ -20,7 +20,7 @@ compile on your dependencies
 
 ```
 dependencies {
-	compile 'com.github.blennerSilva:AwesomeDialog:2.0.1'
+	compile 'com.github.eminsr:AwesomeDialog:master-SNAPSHOT'
 }
 ```
 
@@ -28,7 +28,7 @@ dependencies {
 # Wiki
 
 ## General
-[sample module](https://github.com/blennerSilva/AwesomeDialog/tree/master/app/src/main/java/com/awesomedialog/blennersilva/awesomedialog).
+[sample module](https://github.com/eminsr/AwesomeDialog/tree/master/app/src/main/java/com/awesomedialog/blennersilva/awesomedialog).
 
 ### Dialog Types
 
@@ -39,6 +39,7 @@ Each Dialog has its own top color, icon, title and message + its own featured. T
 * [AwesomeWarningDialog](#awesomewarningdialog)
 * [AwesomeNoticeDialog](#awesomenoticedialog)
 * [AwesomeSuccessDialog](#awesomesuccessdialog)
+* [AwesomeCustomDialog](#awesomecustomdialog)
 
 #### AwesomeInfoDialog
 You can set posite and negative buttons here. Closures can be individually set for each button (onClick of any
@@ -70,7 +71,7 @@ button with closure the button will be dismissed).
                     }
                 })
                 .show();
-                
+
 ```
 #### AwesomeErrorDialog
 Display an Error dialog with one button
@@ -104,7 +105,7 @@ Display a Progress Dialog
                 .setDialogIconAndColor(R.drawable.ic_dialog_info, R.color.white)
                 .setCancelable(true)
                 .show();
-                
+
 ```
 #### AwesomeWarningDialog
 Display Warning to user with or without button
@@ -113,11 +114,11 @@ Display Warning to user with or without button
 new AwesomeWarningDialog(this)
                 .setTitle(R.string.app_name)
                 .setMessage(R.string.app_name)
-                .setColoredCircle(R.color.dialogNoticeBackgroundColor)
-                .setDialogIconAndColor(R.drawable.ic_notice, R.color.white)
+                .setColoredCircle(R.color.dialogWarningBackgroundColor)
+                .setDialogIconAndColor(R.drawable.ic_warning, R.color.white)
                 .setCancelable(true)
                 .setButtonText(getString(R.string.dialog_ok_button))
-                .setButtonBackgroundColor(R.color.dialogNoticeBackgroundColor)
+                .setButtonBackgroundColor(R.color.dialogWarningBackgroundColor)
                 .setButtonText(getString(R.string.dialog_ok_button))
                 .setWarningButtonClick(new Closure() {
                     @Override
@@ -126,10 +127,10 @@ new AwesomeWarningDialog(this)
                     }
                 })
                 .show();
-                
+
 ```
 #### AwesomeNoticeDialog
-Display notice to user 
+Display notice to user
 
 ```java
 new AwesomeNoticeDialog(this)
@@ -153,7 +154,7 @@ new AwesomeNoticeDialog(this)
 #### AwesomeSuccessDialog
 Displays a success message, with max of three buttons
 
-```java 
+```java
 new AwesomeSuccessDialog(this)
                 .setTitle(R.string.app_name)
                 .setMessage(R.string.app_name)
@@ -181,22 +182,57 @@ new AwesomeSuccessDialog(this)
                 .show();
 ```
 
+#### AwesomeCustomDialog
+Displays a success message, a textedit and max of three buttons
+
+```java
+new AwesomeCustomDialog(this)
+                .setTitle(R.string.app_name)
+                .setMessage(R.string.app_name)
+                .setColoredCircle(R.color.dialogCustomBackgroundColor)
+                .setDialogIconAndColor(R.drawable.ic_dialog_info, R.color.white)
+                .setCancelable(true)
+                .setEditTextUnderlineColor(R.color.dialogCustomBackgroundColor)
+                .setEditTextColor(R.color.dialogCustomBackgroundColor)
+                .setCustomButtonText(getString(R.string.dialog_ok_button))
+                .setCustomButtonClick(new ClosureEdit() {
+                    @Override
+                    public Boolean exec(EditText editText) {
+                        //click
+
+                        return false;//return true; to hide the dialog
+                    }
+                })
+                .setDoneButtonText(getString(R.string.dialog_done_button))
+                .setDoneButtonClick(new Closure() {
+                    @Override
+                    public void exec() {
+                        //click
+
+                    }
+                })
+                .show();
+```
+
 # Screenshots
 
 ## Info
-<img src="https://github.com/blennerSilva/AwesomeDialog/blob/master/awesomedialoglib/extras/screenshots/info.png" width="300" >
+<img src="https://github.com/eminsr/AwesomeDialog/blob/master/awesomedialoglib/extras/screenshots/info.png" width="300" >
 
 ## Error
-<img src="https://github.com/blennerSilva/AwesomeDialog/blob/master/awesomedialoglib/extras/screenshots/error.png" width="300" >
+<img src="https://github.com/eminsr/AwesomeDialog/blob/master/awesomedialoglib/extras/screenshots/error.png" width="300" >
 
 ## Progress
-<img src="https://github.com/blennerSilva/AwesomeDialog/blob/master/awesomedialoglib/extras/screenshots/progress.png" width="300" >
+<img src="https://github.com/eminsr/AwesomeDialog/blob/master/awesomedialoglib/extras/screenshots/progress.png" width="300" >
 
 ## Warning
-<img src="https://github.com/blennerSilva/AwesomeDialog/blob/master/awesomedialoglib/extras/screenshots/warning.png" width="300" >
+<img src="https://github.com/eminsr/AwesomeDialog/blob/master/awesomedialoglib/extras/screenshots/warning.png" width="300" >
 
 ## Notice
-<img src="https://github.com/blennerSilva/AwesomeDialog/blob/master/awesomedialoglib/extras/screenshots/notice.png" width="300" >
+<img src="https://github.com/eminsr/AwesomeDialog/blob/master/awesomedialoglib/extras/screenshots/notice.png" width="300" >
 
 ## Success
-<img src="https://github.com/blennerSilva/AwesomeDialog/blob/master/awesomedialoglib/extras/screenshots/success.png" width="300" >
+<img src="https://github.com/eminsr/AwesomeDialog/blob/master/awesomedialoglib/extras/screenshots/success.png" width="300" >
+
+## Custom with EditText
+<img src="https://github.com/eminsr/AwesomeDialog/blob/master/awesomedialoglib/extras/screenshots/custom.png" width="300" >

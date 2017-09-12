@@ -67,6 +67,14 @@ public class MainActivity extends AppCompatActivity {
                 showSuccessDialog();
             }
         });
+
+        Button btnCustom = (Button) findViewById(R.id.btnCustom);
+        btnCustom.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                showCustomDialog();
+            }
+        });
     }
 
     private void showErrorDialog() {
@@ -91,5 +99,18 @@ public class MainActivity extends AppCompatActivity {
 
     private void showSuccessDialog() {
         new AwesomeSuccessDialog(this).setPositiveButtonText(getString(R.string.dialog_ok_button)).show();
+    }
+
+    private void showCustomDialog() {
+        new AwesomeCustomDialog(this)
+                .setCustomButtonText(getString(R.string.dialog_ok_button))
+                .setCustomButtonClick(new ClosureEdit() {
+                    @Override
+                    public Boolean exec(EditText editText) {
+                        Toast.makeText(MainActivity.this, ""+editText.getText().toString(), Toast.LENGTH_SHORT).show();
+                        return true;
+                    }
+                })
+                .setDoneButtonText(getString(R.string.dialog_done_button)).show();
     }
 }
