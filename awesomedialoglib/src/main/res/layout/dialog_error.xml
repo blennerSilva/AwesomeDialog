@@ -75,7 +75,7 @@
 
             <ImageView
                 android:id="@+id/dialog_icon"
-                android:layout_width="40dp"
+                android:layout_width="50dp"
                 android:layout_height="30dp"
                 android:layout_centerHorizontal="true"
                 android:layout_centerVertical="true" />
