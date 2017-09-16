@@ -20,7 +20,7 @@ compile on your dependencies
 
 ```
 dependencies {
-	compile 'com.github.blennerSilva:AwesomeDialog:2.0.3'
+	compile 'com.github.blennerSilva:AwesomeDialog:2.0.5'
 }
 ```
 
@@ -54,10 +54,19 @@ button with closure the button will be dismissed).
                 .setPositiveButtonText(getString(R.string.dialog_yes_button))
                 .setPositiveButtonbackgroundColor(R.color.dialogInfoBackgroundColor)
                 .setPositiveButtonTextColor(R.color.white)
+                .setNeutralButtonText(getString(R.string.dialog_neutral_button))
+                .setNeutralButtonbackgroundColor(R.color.dialogInfoBackgroundColor)
+                .setNeutralButtonTextColor(R.color.white)
                 .setNegativeButtonText(getString(R.string.dialog_no_button))
                 .setNegativeButtonbackgroundColor(R.color.dialogInfoBackgroundColor)
                 .setNegativeButtonTextColor(R.color.white)
                 .setPositiveButtonClick(new Closure() {
+                    @Override
+                    public void exec() {
+                        //click
+                    }
+                })
+                .setNeutralButtonClick(new Closure() {
                     @Override
                     public void exec() {
                         //click
@@ -70,7 +79,7 @@ button with closure the button will be dismissed).
                     }
                 })
                 .show();
-                
+
 ```
 #### AwesomeErrorDialog
 Display an Error dialog with one button
@@ -104,7 +113,7 @@ Display a Progress Dialog
                 .setDialogIconAndColor(R.drawable.ic_dialog_info, R.color.white)
                 .setCancelable(true)
                 .show();
-                
+
 ```
 #### AwesomeWarningDialog
 Display Warning to user with or without button
@@ -126,10 +135,10 @@ new AwesomeWarningDialog(this)
                     }
                 })
                 .show();
-                
+
 ```
 #### AwesomeNoticeDialog
-Display notice to user 
+Display notice to user
 
 ```java
 new AwesomeNoticeDialog(this)
@@ -153,7 +162,7 @@ new AwesomeNoticeDialog(this)
 #### AwesomeSuccessDialog
 Displays a success message, with max of three buttons
 
-```java 
+```java
 new AwesomeSuccessDialog(this)
                 .setTitle(R.string.app_name)
                 .setMessage(R.string.app_name)
