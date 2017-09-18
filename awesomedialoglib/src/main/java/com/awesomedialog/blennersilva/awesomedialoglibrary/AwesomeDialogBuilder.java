@@ -101,6 +101,16 @@ public abstract class AwesomeDialogBuilder<T extends AwesomeDialogBuilder> {
         return (T) this;
     }
 
+    public T setDialogIconOnly(int icon) {
+        if (dialogIcon != null) {
+            Animation alertIcon = AnimationUtils.loadAnimation(getContext(), R.anim.rubber_band);
+            dialogIcon.startAnimation(alertIcon);
+            dialogIcon.setImageResource(icon);
+        }
+
+        return (T) this;
+    }
+
     public Dialog show() {
         try {
             if (context instanceof Activity) {
