@@ -2,6 +2,7 @@ package com.awesomedialog.blennersilva.awesomedialog;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 
@@ -75,6 +76,18 @@ public class MainActivity extends AppCompatActivity {
 
     private void showInfoDialog() {
         new AwesomeInfoDialog(this).setPositiveButtonText(getString(R.string.dialog_ok_button)).show();
+//        new AwesomeInfoDialog(this)
+//                .setPositiveButtonText("PositiveButton")
+//                .setNeutralButtonText("NeutralButton")
+//                .setNeutralButtonClick(new Closure() {
+//                    @Override
+//                    public void exec() {
+//                        Log.d("TEST","Neutral click");
+//                    }
+//                })
+//                .setNegativeButtonText("NegativeButton")
+//                .show();
+
     }
 
     private void showProgressDialog() {

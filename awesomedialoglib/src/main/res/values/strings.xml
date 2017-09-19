@@ -3,4 +3,5 @@
     <string name="dialog_ok_button">Ok</string>
     <string name="dialog_yes_button">Yes</string>
     <string name="dialog_no_button">No</string>
+    <string name="dialog_neutral_button">Neutral</string>
 </resources>
