@@ -209,3 +209,11 @@ new AwesomeSuccessDialog(this)
 
 ## Success
 <img src="https://github.com/blennerSilva/AwesomeDialog/blob/master/awesomedialoglib/extras/screenshots/success.png" width="300" >
+
+## License
+
+[MIT](http://opensource.org/licenses/MIT)
+
+Copyright (c) 2017-present, Blenner Silva
+
+-- 
