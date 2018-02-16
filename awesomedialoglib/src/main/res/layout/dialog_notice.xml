@@ -12,7 +12,9 @@
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
-        android:layout_marginTop="150dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:layout_marginTop="70dp"
         android:background="@drawable/dialog_round">
 
         <TextView
@@ -49,11 +51,11 @@
             android:layout_marginEnd="10dp"
             android:layout_marginStart="10dp"
             android:layout_marginTop="10dp"
-            android:visibility="gone"
             android:paddingEnd="10dp"
             android:paddingLeft="10dp"
             android:paddingRight="10dp"
-            android:paddingStart="10dp" />
+            android:paddingStart="10dp"
+            android:visibility="gone" />
 
     </RelativeLayout>
 
@@ -62,7 +64,6 @@
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="35dp"
         android:background="@drawable/circle_background">
 
         <RelativeLayout

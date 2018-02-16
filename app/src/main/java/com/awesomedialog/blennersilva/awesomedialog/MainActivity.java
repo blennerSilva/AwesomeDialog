@@ -75,19 +75,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void showInfoDialog() {
-        new AwesomeInfoDialog(this).setPositiveButtonText(getString(R.string.dialog_ok_button)).show();
-//        new AwesomeInfoDialog(this)
-//                .setPositiveButtonText("PositiveButton")
-//                .setNeutralButtonText("NeutralButton")
-//                .setNeutralButtonClick(new Closure() {
-//                    @Override
-//                    public void exec() {
-//                        Log.d("TEST","Neutral click");
-//                    }
-//                })
-//                .setNegativeButtonText("NegativeButton")
-//                .show();
-
+        new AwesomeInfoDialog(this).setPositiveButtonText(getString(R.string.dialog_ok_button))
+                .show();
     }
 
     private void showProgressDialog() {

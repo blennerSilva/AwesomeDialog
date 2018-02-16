@@ -39,7 +39,7 @@ public class AwesomeInfoDialog extends AwesomeDialogBuilder<AwesomeInfoDialog> {
         dialogBody = findView(R.id.dialog_body);
     }
 
-    public AwesomeInfoDialog setDialogBodyBackgroundColor(int color){
+    public AwesomeInfoDialog setDialogBodyBackgroundColor(int color) {
         if (dialogBody != null) {
             dialogBody.getBackground().setColorFilter(ContextCompat.getColor(getContext(), color), PorterDuff.Mode.SRC_IN);
         }
@@ -129,6 +129,7 @@ public class AwesomeInfoDialog extends AwesomeDialogBuilder<AwesomeInfoDialog> {
     public AwesomeInfoDialog setNegativeButtonText(String text) {
         if (negativeButton != null) {
             negativeButton.setText(text);
+            negativeButton.setVisibility(View.VISIBLE);
         }
 
         return this;
@@ -137,7 +138,6 @@ public class AwesomeInfoDialog extends AwesomeDialogBuilder<AwesomeInfoDialog> {
     public AwesomeInfoDialog setNegativeButtonTextColor(int textColor) {
         if (negativeButton != null) {
             negativeButton.setTextColor(ContextCompat.getColor(getContext(), textColor));
-            negativeButton.setVisibility(View.VISIBLE);
         }
 
         return this;
@@ -154,6 +154,7 @@ public class AwesomeInfoDialog extends AwesomeDialogBuilder<AwesomeInfoDialog> {
     public AwesomeInfoDialog setNeutralButtonText(String text) {
         if (neutralButton != null) {
             neutralButton.setText(text);
+            neutralButton.setVisibility(View.VISIBLE);
         }
 
         return this;
@@ -162,7 +163,6 @@ public class AwesomeInfoDialog extends AwesomeDialogBuilder<AwesomeInfoDialog> {
     public AwesomeInfoDialog setNeutralButtonTextColor(int textColor) {
         if (neutralButton != null) {
             neutralButton.setTextColor(ContextCompat.getColor(getContext(), textColor));
-            neutralButton.setVisibility(View.VISIBLE);
         }
 
         return this;
