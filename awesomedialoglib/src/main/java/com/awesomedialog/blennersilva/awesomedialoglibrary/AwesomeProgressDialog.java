@@ -36,7 +36,7 @@ public class AwesomeProgressDialog extends AwesomeDialogBuilder<AwesomeProgressD
     }
 
     public AwesomeProgressDialog setProgressBarColor(int color) {
-        progressBar.getIndeterminateDrawable().setColorFilter(ContextCompat.getColor(getContext(), R.color.white), PorterDuff.Mode.SRC_IN);
+        progressBar.getIndeterminateDrawable().setColorFilter(ContextCompat.getColor(getContext(), color), PorterDuff.Mode.SRC_IN);
         return this;
     }
 
