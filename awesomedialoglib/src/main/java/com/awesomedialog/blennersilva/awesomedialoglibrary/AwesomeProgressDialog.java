@@ -2,7 +2,7 @@ package com.awesomedialog.blennersilva.awesomedialoglibrary;
 
 import android.content.Context;
 import android.graphics.PorterDuff;
-import android.support.v4.content.ContextCompat;
+import androidx.core.content.ContextCompat;
 import android.widget.ProgressBar;
 import android.widget.RelativeLayout;
 

@@ -1,8 +1,8 @@
 package com.awesomedialog.blennersilva.awesomedialog;
 
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
+import androidx.appcompat.app.AppCompatActivity;
+
 import android.view.View;
 import android.widget.Button;
 
@@ -12,7 +12,6 @@ import com.awesomedialog.blennersilva.awesomedialoglibrary.AwesomeNoticeDialog;
 import com.awesomedialog.blennersilva.awesomedialoglibrary.AwesomeProgressDialog;
 import com.awesomedialog.blennersilva.awesomedialoglibrary.AwesomeSuccessDialog;
 import com.awesomedialog.blennersilva.awesomedialoglibrary.AwesomeWarningDialog;
-import com.awesomedialog.blennersilva.awesomedialoglibrary.interfaces.Closure;
 
 public class MainActivity extends AppCompatActivity {
 
