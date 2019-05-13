@@ -69,6 +69,13 @@ public class AwesomeNoticeDialog extends AwesomeDialogBuilder<AwesomeNoticeDialo
         return this;
     }
 
+    public AwesomeNoticeDialog setButtonAllCapsText(boolean allCaps) {
+        if (btDialogOk != null) {
+            btDialogOk.setAllCaps(allCaps);
+        }
+        return this;
+    }
+
     public AwesomeNoticeDialog setButtonText(String text) {
         if (btDialogOk != null) {
             btDialogOk.setText(text);

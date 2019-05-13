@@ -69,6 +69,13 @@ public class AwesomeErrorDialog extends AwesomeDialogBuilder<AwesomeErrorDialog>
         return this;
     }
 
+    public AwesomeErrorDialog setButtonAllCapsText(boolean allCaps) {
+        if (btDialogOk != null) {
+            btDialogOk.setAllCaps(allCaps);
+        }
+        return this;
+    }
+
     public AwesomeErrorDialog setButtonText(String text) {
         if (btDialogOk != null) {
             btDialogOk.setText(text);

@@ -61,6 +61,13 @@ public class AwesomeSuccessDialog extends AwesomeDialogBuilder<AwesomeSuccessDia
         return this;
     }
 
+    public AwesomeSuccessDialog setPositiveButtonAllCapsText(boolean allCaps) {
+        if (positiveButton != null) {
+            positiveButton.setAllCaps(allCaps);
+        }
+        return this;
+    }
+
     public AwesomeSuccessDialog setNegativeButtonClick(@Nullable final Closure selectedNo) {
         negativeButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -76,6 +83,13 @@ public class AwesomeSuccessDialog extends AwesomeDialogBuilder<AwesomeSuccessDia
         return this;
     }
 
+    public AwesomeSuccessDialog setNegativeButtonAllCapsText(boolean allCaps) {
+        if (negativeButton != null) {
+            negativeButton.setAllCaps(allCaps);
+        }
+        return this;
+    }
+
     public AwesomeSuccessDialog setDoneButtonClick(@Nullable final Closure selectedDone) {
         doneButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -88,6 +102,13 @@ public class AwesomeSuccessDialog extends AwesomeDialogBuilder<AwesomeSuccessDia
             }
         });
 
+        return this;
+    }
+
+    public AwesomeSuccessDialog setDoneButtonAllCapsText(boolean allCaps) {
+        if (doneButton != null) {
+            doneButton.setAllCaps(allCaps);
+        }
         return this;
     }
 

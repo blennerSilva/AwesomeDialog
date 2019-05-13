@@ -70,6 +70,13 @@ public class AwesomeWarningDialog extends AwesomeDialogBuilder<AwesomeWarningDia
         return this;
     }
 
+    public AwesomeWarningDialog setButtonAllCapsText(boolean allCaps) {
+        if (btDialogOk != null) {
+            btDialogOk.setAllCaps(allCaps);
+        }
+        return this;
+    }
+
     public AwesomeWarningDialog setButtonText(String text) {
         if (btDialogOk != null) {
             btDialogOk.setText(text);

@@ -109,6 +109,13 @@ public class AwesomeInfoDialog extends AwesomeDialogBuilder<AwesomeInfoDialog> {
         return this;
     }
 
+    public AwesomeInfoDialog setPositiveButtonAllCapsText(boolean allCaps) {
+        if (positiveButton != null) {
+            positiveButton.setAllCaps(allCaps);
+        }
+        return this;
+    }
+
     public AwesomeInfoDialog setPositiveButtonText(String text) {
         if (positiveButton != null) {
             positiveButton.setText(text);
@@ -131,6 +138,13 @@ public class AwesomeInfoDialog extends AwesomeDialogBuilder<AwesomeInfoDialog> {
             negativeButton.setText(text);
         }
 
+        return this;
+    }
+
+    public AwesomeInfoDialog setNegativeButtonAllCapsText(boolean allCaps) {
+        if (negativeButton != null) {
+            negativeButton.setAllCaps(allCaps);
+        }
         return this;
     }
 
@@ -159,6 +173,13 @@ public class AwesomeInfoDialog extends AwesomeDialogBuilder<AwesomeInfoDialog> {
         return this;
     }
 
+    public AwesomeInfoDialog setNeutralButtonAllCapsText(boolean allCaps) {
+        if (neutralButton != null) {
+            neutralButton.setAllCaps(allCaps);
+        }
+        return this;
+    }
+
     public AwesomeInfoDialog setNeutralButtonTextColor(int textColor) {
         if (neutralButton != null) {
             neutralButton.setTextColor(ContextCompat.getColor(getContext(), textColor));
@@ -167,6 +188,7 @@ public class AwesomeInfoDialog extends AwesomeDialogBuilder<AwesomeInfoDialog> {
 
         return this;
     }
+
 
 
     @Override
