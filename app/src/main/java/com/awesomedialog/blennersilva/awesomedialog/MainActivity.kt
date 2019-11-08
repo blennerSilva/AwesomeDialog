@@ -29,7 +29,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun showInfoDialog() {
-        AwesomeInfoDialog(this).setPositiveButtonText(getString(R.string.dialog_ok_button)).show()
+        AwesomeInfoDialog(this).setPositiveButtonText(getString(R.string.dialog_ok_button), false).show()
     }
 
     private fun showProgressDialog() {

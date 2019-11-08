@@ -50,9 +50,10 @@ class AwesomeErrorDialog(context: Context) : AwesomeDialogBuilder<AwesomeErrorDi
         return this
     }
 
-    fun setButtonText(text: String): AwesomeErrorDialog {
+    fun setButtonText(text: String, allCaps: Boolean = true): AwesomeErrorDialog {
         btDialogOk.text = text
         btDialogOk.visibility = View.VISIBLE
+        btDialogOk.isAllCaps = allCaps
         return this
     }
 }

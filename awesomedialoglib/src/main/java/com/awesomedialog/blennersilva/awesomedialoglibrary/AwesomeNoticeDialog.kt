@@ -51,9 +51,10 @@ class AwesomeNoticeDialog(context: Context) : AwesomeDialogBuilder<AwesomeNotice
         return this
     }
 
-    fun setButtonText(text: String): AwesomeNoticeDialog {
+    fun setButtonText(text: String, allCaps: Boolean = true): AwesomeNoticeDialog {
         btDialogOk.text = text
         btDialogOk.visibility = View.VISIBLE
+        btDialogOk.isAllCaps = allCaps
         return this
     }
 }

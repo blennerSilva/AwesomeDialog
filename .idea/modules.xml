@@ -2,11 +2,11 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/AndroidStudioProjects-AwesomeDialog.iml" filepath="$PROJECT_DIR$/AndroidStudioProjects-AwesomeDialog.iml" />
       <module fileurl="file://$PROJECT_DIR$/AwesomeDialog.iml" filepath="$PROJECT_DIR$/AwesomeDialog.iml" />
-      <module fileurl="file://$PROJECT_DIR$/AwesomeDialog.iml" filepath="$PROJECT_DIR$/AwesomeDialog.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/AwesomeDialog-app.iml" filepath="$PROJECT_DIR$/app/AwesomeDialog-app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/awesomedialoglib/AwesomeDialog-awesomedialoglib.iml" filepath="$PROJECT_DIR$/awesomedialoglib/AwesomeDialog-awesomedialoglib.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/awesomedialoglib/awesomedialoglib.iml" filepath="$PROJECT_DIR$/awesomedialoglib/awesomedialoglib.iml" />
       <module fileurl="file://$PROJECT_DIR$/awesomedialoglib/awesomedialoglib.iml" filepath="$PROJECT_DIR$/awesomedialoglib/awesomedialoglib.iml" />
     </modules>
   </component>
