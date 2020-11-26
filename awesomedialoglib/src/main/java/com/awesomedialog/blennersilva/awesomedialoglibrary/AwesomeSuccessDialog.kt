@@ -96,10 +96,11 @@ class AwesomeSuccessDialog(context: Context) : AwesomeDialogBuilder<AwesomeSucce
         return this
     }
 
-    fun setPositiveButtonText(text: String): AwesomeSuccessDialog {
+    fun setPositiveButtonText(text: String, allCaps: Boolean = true): AwesomeSuccessDialog {
         if (positiveButton != null) {
             positiveButton!!.text = text
             positiveButton!!.visibility = View.VISIBLE
+            positiveButton?.isAllCaps = allCaps
         }
         return this
     }
@@ -111,10 +112,11 @@ class AwesomeSuccessDialog(context: Context) : AwesomeDialogBuilder<AwesomeSucce
         return this
     }
 
-    fun setNegativeButtonText(text: String): AwesomeSuccessDialog {
+    fun setNegativeButtonText(text: String, allCaps: Boolean = true): AwesomeSuccessDialog {
         if (negativeButton != null) {
             negativeButton!!.text = text
             negativeButton!!.visibility = View.VISIBLE
+            negativeButton?.isAllCaps = allCaps
         }
         return this
     }
@@ -133,10 +135,11 @@ class AwesomeSuccessDialog(context: Context) : AwesomeDialogBuilder<AwesomeSucce
         return this
     }
 
-    fun setDoneButtonText(text: String): AwesomeSuccessDialog {
+    fun setDoneButtonText(text: String, allCaps: Boolean = true): AwesomeSuccessDialog {
         if (doneButton != null) {
             doneButton!!.text = text
             doneButton!!.visibility = View.VISIBLE
+            doneButton?.isAllCaps = allCaps
         }
         return this
     }
